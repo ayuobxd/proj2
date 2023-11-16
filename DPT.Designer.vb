@@ -245,7 +245,7 @@ Partial Class Menu
         Me.LabelMinqd.AutoSize = True
         Me.LabelMinqd.Location = New System.Drawing.Point(12, 158)
         Me.LabelMinqd.Name = "LabelMinqd"
-        Me.LabelMinqd.Size = New System.Drawing.Size(78, 16)
+        Me.LabelMinqd.Size = New System.Drawing.Size(81, 17)
         Me.LabelMinqd.TabIndex = 4
         Me.LabelMinqd.Text = "LabelMinqd"
         '
@@ -254,7 +254,7 @@ Partial Class Menu
         Me.LabelMaxqd.AutoSize = True
         Me.LabelMaxqd.Location = New System.Drawing.Point(12, 124)
         Me.LabelMaxqd.Name = "LabelMaxqd"
-        Me.LabelMaxqd.Size = New System.Drawing.Size(82, 16)
+        Me.LabelMaxqd.Size = New System.Drawing.Size(84, 17)
         Me.LabelMaxqd.TabIndex = 3
         Me.LabelMaxqd.Text = "LabelMaxqd"
         '
@@ -263,7 +263,7 @@ Partial Class Menu
         Me.LabelTestType.AutoSize = True
         Me.LabelTestType.Location = New System.Drawing.Point(12, 92)
         Me.LabelTestType.Name = "LabelTestType"
-        Me.LabelTestType.Size = New System.Drawing.Size(100, 16)
+        Me.LabelTestType.Size = New System.Drawing.Size(103, 17)
         Me.LabelTestType.TabIndex = 2
         Me.LabelTestType.Text = "LabelTestType"
         '
@@ -272,7 +272,7 @@ Partial Class Menu
         Me.LabelTestDate.AutoSize = True
         Me.LabelTestDate.Location = New System.Drawing.Point(12, 61)
         Me.LabelTestDate.Name = "LabelTestDate"
-        Me.LabelTestDate.Size = New System.Drawing.Size(97, 16)
+        Me.LabelTestDate.Size = New System.Drawing.Size(101, 17)
         Me.LabelTestDate.TabIndex = 1
         Me.LabelTestDate.Text = "LabelTestDate"
         '
@@ -281,7 +281,7 @@ Partial Class Menu
         Me.LabelTestName.AutoSize = True
         Me.LabelTestName.Location = New System.Drawing.Point(12, 31)
         Me.LabelTestName.Name = "LabelTestName"
-        Me.LabelTestName.Size = New System.Drawing.Size(105, 16)
+        Me.LabelTestName.Size = New System.Drawing.Size(108, 17)
         Me.LabelTestName.TabIndex = 0
         Me.LabelTestName.Text = "LabelTestName"
         '

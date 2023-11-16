@@ -186,8 +186,7 @@
     End Sub
     Private Sub Form1_ResizeEnd(sender As Object, e As EventArgs) Handles Me.ResizeEnd
         PictureBox1.Invalidate()
-        Console.WriteLine("COLUMNS: {0}", table.Columns.Count)
-        Console.WriteLine("ROWS: {0}", table.Rows.Count)
+
 
     End Sub
 
@@ -195,5 +194,11 @@
         PictureBox1.Invalidate()
     End Sub
 
+    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
 
+
+
+
+
+    End Sub
 End Class
