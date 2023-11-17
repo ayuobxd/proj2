@@ -29,43 +29,9 @@
     Dim P1 As Point
     Dim P2 As Point
 
-    Dim data As Double
-
-    Dim ListDeoth As List(Of Double)
-    Dim ListNotches As List(Of Integer)
-    Dim ListBlowsN As List(Of Integer)
-    Dim ListRd As List(Of Integer)
-    Dim ListQd As List(Of Integer)
-
-    Function GetTable() As DataTable
-        ' Create new DataTable instance and clear it.
-        Dim table As New DataTable
-        table.Clear()
-        ' Create columns in the DataTable.
+    Public Property data As Double
 
 
-        ' Add rows with those columns filled in the DataTable.
-
-
-        Console.WriteLine()
-        l = CInt(InputData.DataGridView1.RowCount) - 1
-        r = 0
-        o = 0
-        Do Until r = l
-            Do Until o = 5
-
-
-
-
-                o += 1
-            Loop
-            r += 1
-        Loop
-
-
-
-            Return table
-    End Function
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Call CenterToScreen()
@@ -97,9 +63,7 @@
         InputData.Visible = True
     End Sub
 
-    Private Sub PictureBox4_Click(sender As Object, e As EventArgs)
 
-    End Sub
 
     Private Sub PictureBox1_Paint(sender As Object, e As PaintEventArgs) Handles PictureBox1.Paint
         Try
@@ -194,11 +158,5 @@
         PictureBox1.Invalidate()
     End Sub
 
-    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
 
-
-
-
-
-    End Sub
 End Class

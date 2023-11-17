@@ -29,6 +29,8 @@ Partial Class InputData
         Me.Blows = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Rd = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.qd = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -41,7 +43,7 @@ Partial Class InputData
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.RowHeadersWidth = 51
         Me.DataGridView1.RowTemplate.Height = 24
-        Me.DataGridView1.Size = New System.Drawing.Size(804, 543)
+        Me.DataGridView1.Size = New System.Drawing.Size(804, 482)
         Me.DataGridView1.TabIndex = 0
         '
         'Dep
@@ -74,11 +76,31 @@ Partial Class InputData
         Me.qd.MinimumWidth = 6
         Me.qd.Name = "qd"
         '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(722, 518)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(94, 28)
+        Me.Button1.TabIndex = 1
+        Me.Button1.Text = "Save"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(609, 518)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(94, 28)
+        Me.Button2.TabIndex = 2
+        Me.Button2.Text = "Cancel"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
         'InputData
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(830, 567)
+        Me.Controls.Add(Me.Button2)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.DataGridView1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "InputData"
@@ -94,4 +116,6 @@ Partial Class InputData
     Friend WithEvents Blows As DataGridViewTextBoxColumn
     Friend WithEvents Rd As DataGridViewTextBoxColumn
     Friend WithEvents qd As DataGridViewTextBoxColumn
+    Friend WithEvents Button1 As Button
+    Friend WithEvents Button2 As Button
 End Class
