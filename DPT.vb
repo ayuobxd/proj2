@@ -10,15 +10,12 @@
     Dim y1 As Integer
     Dim y2 As Integer
     'counters
-    Dim i As Integer
-    Dim j As Integer
-    Dim r As Integer
-    Dim t As Integer = 1
-    Dim o As Integer
+
+
     'line numbers
     Dim LengthL As Integer
     Dim LengthC As Integer
-    Dim l As Integer
+
     'spacers
     Dim ex As Integer
     Dim ey As Integer
@@ -29,7 +26,7 @@
     Dim P1 As Point
     Dim P2 As Point
 
-    Public Property data As Double
+
 
 
 
@@ -42,10 +39,12 @@
 
     End Sub
 
+
+
     Sub CloseAll()
         TestInfo.Dispose()
         Device.Dispose()
-        InputData.Visible = False
+        InputData.Dispose()
     End Sub
 
     Private Sub TestInfoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles TestInfoToolStripMenuItem.Click
@@ -61,6 +60,7 @@
     Private Sub DirectToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DirectToolStripMenuItem.Click
         CloseAll()
         InputData.Visible = True
+        SvDt.GetTable()
     End Sub
 
 
@@ -72,38 +72,29 @@
             Dim MyPenR As Pen
             Dim pn As New Pen(Me.ForeColor)
             MyPenB = New Pen(Brushes.Black, 1)
-            MyPenR = New Pen(Brushes.Red, 1)
+            MyPenR = New Pen(Brushes.Red, 3)
             MyPenR.DashStyle = Drawing2D.DashStyle.Dash
             pn.Width = 10
             pn.DashStyle = Drawing2D.DashStyle.Dash
 
             Dim fnt As New Font("Arial", 10, FontStyle.Regular, GraphicsUnit.Point)
-            x1 = 0
-            x2 = 0
-            y1 = 0
-            y2 = 0
-            l = CInt(InputData.DataGridView1.RowCount) - 1
-            r = 0
-            LengthL = 0
-            LengthC = 0
-            Do Until r = l
-                t = CInt(InputData.DataGridView1.Rows(r).Cells(0).Value)
-                If t > LengthC Then
-                    LengthC = t
 
+
+
+            For i = 0 To SvDt.lg
+                LengthL = 0
+                LengthC = 0
+
+                If (SvDt.Data(i, 0)) > LengthC Then
+                    LengthC = SvDt.Data(i, 0)
                 End If
-                r += 1
-            Loop
-
-            r = 0
-            Do Until r = l
-                t = CInt(InputData.DataGridView1.Rows(r).Cells(1).Value)
-                If t > LengthL Then
-                    LengthL = t
-
+                If (SvDt.Data(i, 1)) > LengthL Then
+                    LengthL = SvDt.Data(i, 1)
                 End If
-                r += 1
-            Loop
+            Next i
+
+
+
 
 
 
@@ -111,52 +102,49 @@
             n = Math.Ceiling(LengthL / 10)
             m = Math.Ceiling(LengthC / 10)
 
+            x1 = 0
+            x2 = 0
+            y1 = 0
+            y2 = 0
+
             ex = 0
             ey = 0
-            i = 0
-            j = 0
-            Do Until i > 10
+
+            For i = 0 To 10
+
+
 
                 mygraphics.DrawLine(MyPenB, 0 + x01, y1 + y01, 500 + x01, y2 + y01)
                 mygraphics.DrawString(ex, fnt, Brushes.Black, 515 + x01, y2 + y01)
                 y1 += 50
                 y2 += 50
-                i += 1
                 ex += m
-            Loop
-
-            Do Until j > 10
 
                 mygraphics.DrawLine(MyPenB, x1 + x02, 0 + y02, x2 + x02, 500 + y02)
                 mygraphics.DrawString(ey, fnt, Brushes.Black, x2 + x02, 515 + y02)
                 x1 += 50
                 x2 += 50
-                j += 1
                 ey += n
-            Loop
-            r = 1
-            Do Until r = l
 
-                P1.Y = ((InputData.DataGridView1.Rows(r - 1).Cells(0).Value) * 50) / m
-                P1.X = ((InputData.DataGridView1.Rows(r - 1).Cells(1).Value) * 50) / n
-                P2.Y = ((InputData.DataGridView1.Rows(r).Cells(0).Value) * 50) / m
-                P2.X = ((InputData.DataGridView1.Rows(r).Cells(1).Value) * 50) / n
+            Next i
+
+
+
+            For i = 1 To 10
+
+                P1.Y = ((SvDt.Data(i - 1, 0)) * 50) / m
+                P1.X = ((SvDt.Data(i - 1, 1)) * 50) / n
+                P2.Y = ((SvDt.Data(i, 0)) * 50) / m
+                P2.X = ((SvDt.Data(i, 1)) * 50) / n
                 mygraphics.DrawLine(MyPenR, P1.X + x02, P1.Y + y02, P2.X + x02, P2.Y + y02)
-                r += 1
-            Loop
+
+            Next i
         Catch ex As Exception
         End Try
 
     End Sub
     Private Sub Form1_ResizeEnd(sender As Object, e As EventArgs) Handles Me.ResizeEnd
         PictureBox1.Invalidate()
-
-
     End Sub
-
-    Private Sub Button1_Click(sender As Object, e As EventArgs)
-        PictureBox1.Invalidate()
-    End Sub
-
 
 End Class
