@@ -24,11 +24,6 @@ Partial Class InputData
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(InputData))
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.Dep = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Notches = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Blows = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Rd = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.qd = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -38,43 +33,12 @@ Partial Class InputData
         '
         Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Dep, Me.Notches, Me.Blows, Me.Rd, Me.qd})
         Me.DataGridView1.Location = New System.Drawing.Point(12, 12)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.RowHeadersWidth = 51
         Me.DataGridView1.RowTemplate.Height = 24
         Me.DataGridView1.Size = New System.Drawing.Size(804, 482)
         Me.DataGridView1.TabIndex = 0
-        '
-        'Dep
-        '
-        Me.Dep.HeaderText = "Depthe (m)"
-        Me.Dep.MinimumWidth = 6
-        Me.Dep.Name = "Dep"
-        '
-        'Notches
-        '
-        Me.Notches.HeaderText = "Notches (cm)"
-        Me.Notches.MinimumWidth = 6
-        Me.Notches.Name = "Notches"
-        '
-        'Blows
-        '
-        Me.Blows.HeaderText = "N of Blows "
-        Me.Blows.MinimumWidth = 6
-        Me.Blows.Name = "Blows"
-        '
-        'Rd
-        '
-        Me.Rd.HeaderText = "rd (bar)"
-        Me.Rd.MinimumWidth = 6
-        Me.Rd.Name = "Rd"
-        '
-        'qd
-        '
-        Me.qd.HeaderText = "qd (bar)"
-        Me.qd.MinimumWidth = 6
-        Me.qd.Name = "qd"
         '
         'Button1
         '
@@ -111,11 +75,6 @@ Partial Class InputData
     End Sub
 
     Friend WithEvents DataGridView1 As DataGridView
-    Friend WithEvents Dep As DataGridViewTextBoxColumn
-    Friend WithEvents Notches As DataGridViewTextBoxColumn
-    Friend WithEvents Blows As DataGridViewTextBoxColumn
-    Friend WithEvents Rd As DataGridViewTextBoxColumn
-    Friend WithEvents qd As DataGridViewTextBoxColumn
     Friend WithEvents Button1 As Button
     Friend WithEvents Button2 As Button
 End Class
