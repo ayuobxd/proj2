@@ -33,7 +33,7 @@
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Call CenterToScreen()
         Me.FormBorderStyle = FormBorderStyle.FixedDialog
-        Me.MaximizeBox = MaximizeBox.Equals(0)
+        Me.MaximizeBox = False
 
 
 
@@ -70,20 +70,19 @@
             Dim mygraphics As Graphics = e.Graphics
             Dim MyPenB As Pen
             Dim MyPenR As Pen
-            Dim pn As New Pen(Me.ForeColor)
+
             MyPenB = New Pen(Brushes.Black, 1)
             MyPenR = New Pen(Brushes.Red, 3)
             MyPenR.DashStyle = Drawing2D.DashStyle.Dash
-            pn.Width = 10
-            pn.DashStyle = Drawing2D.DashStyle.Dash
+
 
             Dim fnt As New Font("Arial", 10, FontStyle.Regular, GraphicsUnit.Point)
 
 
-
+            LengthL = 0
+            LengthC = 0
             For i = 0 To SvDt.lg
-                LengthL = 0
-                LengthC = 0
+
 
                 If (SvDt.Data(i, 0)) > LengthC Then
                     LengthC = SvDt.Data(i, 0)
@@ -92,12 +91,6 @@
                     LengthL = SvDt.Data(i, 1)
                 End If
             Next i
-
-
-
-
-
-
 
             n = Math.Ceiling(LengthL / 10)
             m = Math.Ceiling(LengthC / 10)
@@ -112,30 +105,27 @@
 
             For i = 0 To 10
 
-
-
-                mygraphics.DrawLine(MyPenB, 0 + x01, y1 + y01, 500 + x01, y2 + y01)
-                mygraphics.DrawString(ex, fnt, Brushes.Black, 515 + x01, y2 + y01)
+                mygraphics.DrawLine(MyPenB, 0, y1, 500, y2)
+                mygraphics.DrawString(ex, fnt, Brushes.Black, 515, y2)
                 y1 += 50
                 y2 += 50
-                ex += m
+                ex = ex + m
 
-                mygraphics.DrawLine(MyPenB, x1 + x02, 0 + y02, x2 + x02, 500 + y02)
-                mygraphics.DrawString(ey, fnt, Brushes.Black, x2 + x02, 515 + y02)
+                mygraphics.DrawLine(MyPenB, x1, 0, x2, 500)
+                mygraphics.DrawString(ey, fnt, Brushes.Black, x2, 515)
                 x1 += 50
                 x2 += 50
                 ey += n
 
             Next i
 
+            For i = 1 To SvDt.lg
+                P1.X = ((SvDt.Data(i - 1, 1) * 50) / n)
+                P1.Y = ((SvDt.Data(i - 1, 0) * 50) / m)
 
+                P2.X = ((SvDt.Data(i, 1) * 50) / n)
+                P2.Y = ((SvDt.Data(i, 0) * 50) / m)
 
-            For i = 1 To 10
-
-                P1.Y = ((SvDt.Data(i - 1, 0)) * 50) / m
-                P1.X = ((SvDt.Data(i - 1, 1)) * 50) / n
-                P2.Y = ((SvDt.Data(i, 0)) * 50) / m
-                P2.X = ((SvDt.Data(i, 1)) * 50) / n
                 mygraphics.DrawLine(MyPenR, P1.X + x02, P1.Y + y02, P2.X + x02, P2.Y + y02)
 
             Next i
@@ -143,8 +133,9 @@
         End Try
 
     End Sub
-    Private Sub Form1_ResizeEnd(sender As Object, e As EventArgs) Handles Me.ResizeEnd
+
+
+    Private Sub DynamicPointResistanceToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DynamicPointResistanceToolStripMenuItem.Click
         PictureBox1.Invalidate()
     End Sub
-
 End Class

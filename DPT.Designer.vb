@@ -42,6 +42,10 @@ Partial Class Menu
         Me.InputToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DirectToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ExealFileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.GraphToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DynamicPointResistanceToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.UnitPointResistanceToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.NomberOfBlowesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DrawingsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.LayersToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
@@ -66,7 +70,7 @@ Partial Class Menu
         '
         Me.MenuStrip1.BackColor = System.Drawing.Color.Gray
         Me.MenuStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.DataToolStripMenuItem, Me.DrawingsToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.DataToolStripMenuItem, Me.GraphToolStripMenuItem, Me.DrawingsToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(990, 28)
@@ -184,6 +188,31 @@ Partial Class Menu
         Me.ExealFileToolStripMenuItem.Size = New System.Drawing.Size(152, 26)
         Me.ExealFileToolStripMenuItem.Text = "Exeal file"
         '
+        'GraphToolStripMenuItem
+        '
+        Me.GraphToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DynamicPointResistanceToolStripMenuItem, Me.UnitPointResistanceToolStripMenuItem, Me.NomberOfBlowesToolStripMenuItem})
+        Me.GraphToolStripMenuItem.Name = "GraphToolStripMenuItem"
+        Me.GraphToolStripMenuItem.Size = New System.Drawing.Size(63, 24)
+        Me.GraphToolStripMenuItem.Text = "Graph"
+        '
+        'DynamicPointResistanceToolStripMenuItem
+        '
+        Me.DynamicPointResistanceToolStripMenuItem.Name = "DynamicPointResistanceToolStripMenuItem"
+        Me.DynamicPointResistanceToolStripMenuItem.Size = New System.Drawing.Size(260, 26)
+        Me.DynamicPointResistanceToolStripMenuItem.Text = "Dynamic Point Resistance"
+        '
+        'UnitPointResistanceToolStripMenuItem
+        '
+        Me.UnitPointResistanceToolStripMenuItem.Name = "UnitPointResistanceToolStripMenuItem"
+        Me.UnitPointResistanceToolStripMenuItem.Size = New System.Drawing.Size(260, 26)
+        Me.UnitPointResistanceToolStripMenuItem.Text = "Unit Point Resistance"
+        '
+        'NomberOfBlowesToolStripMenuItem
+        '
+        Me.NomberOfBlowesToolStripMenuItem.Name = "NomberOfBlowesToolStripMenuItem"
+        Me.NomberOfBlowesToolStripMenuItem.Size = New System.Drawing.Size(260, 26)
+        Me.NomberOfBlowesToolStripMenuItem.Text = "Number Of Blowes"
+        '
         'DrawingsToolStripMenuItem
         '
         Me.DrawingsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.LayersToolStripMenuItem})
@@ -222,7 +251,7 @@ Partial Class Menu
         Me.Label1.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.Label1.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.0!, System.Drawing.FontStyle.Underline)
-        Me.Label1.Location = New System.Drawing.Point(3, 328)
+        Me.Label1.Location = New System.Drawing.Point(3, 382)
         Me.Label1.Margin = New System.Windows.Forms.Padding(3, 0, 5, 5)
         Me.Label1.Name = "Label1"
         Me.Label1.Padding = New System.Windows.Forms.Padding(5, 0, 10, 5)
@@ -234,9 +263,9 @@ Partial Class Menu
         'RichTextBox1
         '
         Me.RichTextBox1.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.RichTextBox1.Location = New System.Drawing.Point(3, 348)
+        Me.RichTextBox1.Location = New System.Drawing.Point(3, 402)
         Me.RichTextBox1.Name = "RichTextBox1"
-        Me.RichTextBox1.Size = New System.Drawing.Size(203, 218)
+        Me.RichTextBox1.Size = New System.Drawing.Size(203, 164)
         Me.RichTextBox1.TabIndex = 1
         Me.RichTextBox1.Text = ""
         '
@@ -384,4 +413,8 @@ Partial Class Menu
     Friend WithEvents Label1 As Label
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Panel3 As Panel
+    Friend WithEvents GraphToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents DynamicPointResistanceToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents UnitPointResistanceToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents NomberOfBlowesToolStripMenuItem As ToolStripMenuItem
 End Class
