@@ -1,5 +1,43 @@
 ﻿Public Class InputData
 
+    Public ourData As List(Of Menu.DataStr)
+
+    Public Sub SaveDataGrid()
+
+
+        For i = 0 To DataGridView1.RowCount - 1
+            Dim P As Menu.DataStr
+            P.depth = DataGridView1.Rows(i).Cells(0).Value
+            P.notch = DataGridView1.Rows(i).Cells(1).Value
+            P.Nb = DataGridView1.Rows(i).Cells(2).Value
+            P.rd = DataGridView1.Rows(i).Cells(3).Value
+            P.qd = DataGridView1.Rows(i).Cells(4).Value
+
+            ourData.Add(P)
+
+            Next i
+
+    End Sub
+
+    Public Sub LoadDataGrid()
+
+        Dim A, B, C, D, F As Double
+        For i = 0 To ourData.Count - 2
+            Dim row As String()
+            A = ourData.Item(i).depth
+            B = ourData.Item(i).notch
+            C = ourData.Item(i).Nb
+            D = ourData.Item(i).rd
+            F = ourData.Item(i).qd
+
+            row = New String() {A, B, C, D, F}
+            DataGridView1.Rows.Add(row)
+
+        Next i
+
+
+    End Sub
+
     Private Sub InputData_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Call CenterToScreen()
         Me.FormBorderStyle = FormBorderStyle.FixedDialog
@@ -18,30 +56,35 @@
 
 
 
-        If SvDt.Data.Length > 5 Then
-            For i = 0 To SvDt.lg
-                Dim row As String()
-                row = New String() {SvDt.Data(i, 0), SvDt.Data(i, 1), SvDt.Data(i, 2), SvDt.Data(i, 3), SvDt.Data(i, 4)}
-                DataGridView1.Rows.Add(row)
-            Next i
-            'Temp
-        ElseIf SvDt.Data.Length <= 5 Then
-            Dim h As Integer = 0
+
+
+
+        If ourData.Count = 0 Then
+            Dim A As Double = 0
+            Dim B As Integer = 20
+            Dim C As Integer = 0
+            Dim D As Integer = 0
             Dim F As Integer = 0
-            Dim B As Integer = 0
-            For i = 0 To 20
-                Dim randomValue As Integer
-                Dim randomValue2 As Integer
-                randomValue = CInt(Math.Floor((15 - (-10) + 1) * Rnd())) + (-10)
-                randomValue2 = CInt(Math.Floor((3 - (0) + 1) * Rnd())) + (0)
+            For i = 0 To 21
                 Dim row As String()
-                row = New String() {h, F, B, 0, 0}
+                Dim randomValue1 As Integer
+                Dim randomValue2 As Double
+                Dim randomValue3 As Double
+                randomValue3 = CInt(((6 - (2) + 1) * Rnd())) + (2)
+                randomValue2 = CInt(((8 - (4) + 1) * Rnd())) + (4)
+                randomValue1 = CInt(Math.Floor((14 - (0) + 1) * Rnd())) + (0)
+                row = New String() {A, B, C, D, F}
                 DataGridView1.Rows.Add(row)
-                h += 5
-                F += randomValue
-                B += randomValue2
+                A += 0.2
+                B += 20
+                C = randomValue1
+                D = randomValue2
+                F = randomValue3
             Next i
             'Temp
+        ElseIf ourData.Count > 0 Then
+            LoadDataGrid()
+
         End If
 
     End Sub
@@ -49,13 +92,18 @@
 
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        SvDt.GetTable()
+
+        SaveDataGrid()
         Me.Dispose()
     End Sub
 
 
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+
         Me.Dispose()
+
     End Sub
+
+
 End Class
