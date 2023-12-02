@@ -1,6 +1,10 @@
 ﻿Public Class InputData
 
     Public ourData As List(Of Menu.DataStr)
+    Public Array As List(Of List(Of Menu.DataStr2))()
+
+
+
 
     Public Sub SaveDataGrid()
 
@@ -65,18 +69,18 @@
             Dim C As Integer = 0
             Dim D As Integer = 0
             Dim F As Integer = 0
-            For i = 0 To 21
+            For i = 0 To 50
                 Dim row As String()
                 Dim randomValue1 As Integer
                 Dim randomValue2 As Double
                 Dim randomValue3 As Double
                 randomValue3 = CInt(((6 - (2) + 1) * Rnd())) + (2)
-                randomValue2 = CInt(((8 - (4) + 1) * Rnd())) + (4)
+                randomValue2 = CInt(((30 - (4) + 1) * Rnd())) + (4)
                 randomValue1 = CInt(Math.Floor((14 - (0) + 1) * Rnd())) + (0)
                 row = New String() {A, B, C, D, F}
                 DataGridView1.Rows.Add(row)
                 A += 0.2
-                B += 20
+                B = 20
                 C = randomValue1
                 D = randomValue2
                 F = randomValue3
@@ -105,5 +109,7 @@
 
     End Sub
 
+    Private Sub PictureBox3_Click(sender As Object, e As EventArgs) Handles PictureBox3.Click
 
+    End Sub
 End Class

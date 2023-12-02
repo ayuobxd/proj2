@@ -77,12 +77,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApplicationEvents.vb" />
-    <Compile Include="SvDt.vb" />
     <Compile Include="DPT.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="DPT.Designer.vb">
       <DependentUpon>DPT.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Layers.Designer.vb">
+      <DependentUpon>Layers.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Layers.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="TestInfo.Designer.vb">
@@ -122,6 +127,9 @@
   <ItemGroup>
     <EmbeddedResource Include="DPT.resx">
       <DependentUpon>DPT.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layers.resx">
+      <DependentUpon>Layers.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TestInfo.resx">
       <DependentUpon>TestInfo.vb</DependentUpon>
