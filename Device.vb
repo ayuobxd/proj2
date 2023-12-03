@@ -82,8 +82,13 @@ Public Class Device
     End Sub
 
     Public Sub LoadDevices()
-        ComboBox1.Items.Clear()
 
+
+        ComboBox1.Items.Clear()
+        'default Device
+
+
+        'default Device
         For i = 0 To ourDevice.Count - 1
             ComboBox1.Items.Add(ourDevice.Item(i).Name)
         Next i

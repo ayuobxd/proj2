@@ -4,7 +4,6 @@
     End Structure
 
     Public Structure DataStr2
-        Public layer As String
         Public depth, notch, Nb, rd, qd As Double
     End Structure
 
@@ -21,6 +20,7 @@
     Dim x02 As Integer = 20
     Dim y02 As Integer = 20
     'lines drawing
+
     Dim x1 As Integer
     Dim x2 As Integer
     Dim y1 As Integer
@@ -40,11 +40,16 @@
 
     Dim P1 As Point
     Dim P2 As Point
-    Dim tempArray As List(Of List(Of DataStr2))()
+
+
 
     Dim Donee As New List(Of DataStr)
     Dim Devices As New List(Of DeviseStr)
     Dim Layer As New List(Of LayerDta)
+
+    Public LayersNum As Integer
+    Dim LayersChk As New List(Of Integer)
+    Dim DevP As Integer = 0
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Call CenterToScreen()
@@ -59,6 +64,19 @@
         Label7.Text = "."
         Label9.Text = "."
 
+        'LayersChk.Add("Default")
+
+        Dim P As DeviseStr
+        P.Name = "BORRO-B2"
+        P.Hammer = 63.5
+        P.AnvilGuide = 4.3
+        P.rodes = 6.28
+        P.FallingH = 50
+        P.AOfCone = 15.2
+        P.LOfRodes = 1
+        P.Notches = 20
+        P.standard = "NF P 94-155"
+        Devices.Add(P)
     End Sub
 
     Sub CloseAll()
@@ -78,8 +96,10 @@
         CloseAll()
         Dim Frm As New Device
         Frm.ourDevice = Devices
+        Frm.SelDev = DevP
         Frm.ShowDialog()
         Devices = Frm.ourDevice
+        DevP = Frm.SelDev
         Frm.Dispose()
         PictureBox1.Invalidate()
     End Sub
@@ -88,8 +108,14 @@
         CloseAll()
         Dim Frm As New InputData
         Frm.ourData = Donee
+        Frm.OurDevices = Devices
+        Frm.Dev = DevP
+        Frm.layersInput = Layer
         Frm.ShowDialog()
         Donee = Frm.ourData
+        Devices = Frm.OurDevices
+        DevP = Frm.Dev
+        Layer = Frm.layersInput
         Frm.Dispose()
         PictureBox1.Invalidate()
     End Sub
@@ -98,8 +124,12 @@
         CloseAll()
         Dim Frm As New Layers
         Frm.ourLayers = Layer
+        Frm.LayerC = New List(Of Integer)(LayersChk)
+        Frm.LayerN = LayersNum
         Frm.ShowDialog()
         Layer = Frm.ourLayers
+        LayersChk = New List(Of Integer)(Frm.LayerC)
+        LayersNum = Frm.LayerN
         Frm.Dispose()
         PictureBox1.Invalidate()
     End Sub

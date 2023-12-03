@@ -92,7 +92,7 @@ Partial Class Menu
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.DataToolStripMenuItem, Me.GraphToolStripMenuItem, Me.DrawingsToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(990, 28)
+        Me.MenuStrip1.Size = New System.Drawing.Size(990, 25)
         Me.MenuStrip1.TabIndex = 7
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -100,7 +100,7 @@ Partial Class Menu
         '
         Me.FileToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NewTestToolStripMenuItem, Me.OpenTestToolStripMenuItem, Me.SaveToolStripMenuItem, Me.SaveAsToolStripMenuItem, Me.ToolStripSeparator1, Me.ExportToolStripMenuItem, Me.ImportToolStripMenuItem, Me.PrintToolStripMenuItem})
         Me.FileToolStripMenuItem.Name = "FileToolStripMenuItem"
-        Me.FileToolStripMenuItem.Size = New System.Drawing.Size(45, 24)
+        Me.FileToolStripMenuItem.Size = New System.Drawing.Size(45, 21)
         Me.FileToolStripMenuItem.Text = "File"
         '
         'NewTestToolStripMenuItem
@@ -183,7 +183,7 @@ Partial Class Menu
         '
         Me.DataToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.TestInfoToolStripMenuItem, Me.DeviceInfoToolStripMenuItem, Me.InputToolStripMenuItem})
         Me.DataToolStripMenuItem.Name = "DataToolStripMenuItem"
-        Me.DataToolStripMenuItem.Size = New System.Drawing.Size(51, 24)
+        Me.DataToolStripMenuItem.Size = New System.Drawing.Size(51, 21)
         Me.DataToolStripMenuItem.Text = "Data"
         '
         'TestInfoToolStripMenuItem
@@ -226,7 +226,7 @@ Partial Class Menu
         '
         Me.GraphToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DynamicPointResistanceToolStripMenuItem, Me.ToolStripMenuItem1, Me.ToolStripMenuItem5})
         Me.GraphToolStripMenuItem.Name = "GraphToolStripMenuItem"
-        Me.GraphToolStripMenuItem.Size = New System.Drawing.Size(60, 24)
+        Me.GraphToolStripMenuItem.Size = New System.Drawing.Size(60, 21)
         Me.GraphToolStripMenuItem.Text = "Graph"
         '
         'DynamicPointResistanceToolStripMenuItem
@@ -320,14 +320,14 @@ Partial Class Menu
         '
         Me.DrawingsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.LayersToolStripMenuItem})
         Me.DrawingsToolStripMenuItem.Name = "DrawingsToolStripMenuItem"
-        Me.DrawingsToolStripMenuItem.Size = New System.Drawing.Size(82, 24)
+        Me.DrawingsToolStripMenuItem.Size = New System.Drawing.Size(82, 21)
         Me.DrawingsToolStripMenuItem.Text = "Drawings"
         '
         'LayersToolStripMenuItem
         '
         Me.LayersToolStripMenuItem.Image = CType(resources.GetObject("LayersToolStripMenuItem.Image"), System.Drawing.Image)
         Me.LayersToolStripMenuItem.Name = "LayersToolStripMenuItem"
-        Me.LayersToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.LayersToolStripMenuItem.Size = New System.Drawing.Size(132, 26)
         Me.LayersToolStripMenuItem.Text = "Layers"
         '
         'GroupBox1
@@ -352,9 +352,9 @@ Partial Class Menu
         Me.GroupBox1.Dock = System.Windows.Forms.DockStyle.Right
         Me.GroupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.GroupBox1.Font = New System.Drawing.Font("Cambria", 10.2!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox1.Location = New System.Drawing.Point(781, 48)
+        Me.GroupBox1.Location = New System.Drawing.Point(781, 45)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(209, 569)
+        Me.GroupBox1.Size = New System.Drawing.Size(209, 572)
         Me.GroupBox1.TabIndex = 8
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Test Data"
@@ -466,7 +466,7 @@ Partial Class Menu
         'RichTextBox1
         '
         Me.RichTextBox1.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.RichTextBox1.Location = New System.Drawing.Point(3, 421)
+        Me.RichTextBox1.Location = New System.Drawing.Point(3, 424)
         Me.RichTextBox1.Name = "RichTextBox1"
         Me.RichTextBox1.Size = New System.Drawing.Size(203, 145)
         Me.RichTextBox1.TabIndex = 1
@@ -535,11 +535,11 @@ Partial Class Menu
         '
         Me.PictureBox2.Dock = System.Windows.Forms.DockStyle.Left
         Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
-        Me.PictureBox2.Location = New System.Drawing.Point(0, 48)
+        Me.PictureBox2.Location = New System.Drawing.Point(0, 45)
         Me.PictureBox2.Margin = New System.Windows.Forms.Padding(20, 3, 3, 3)
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
-        Me.PictureBox2.Size = New System.Drawing.Size(216, 569)
+        Me.PictureBox2.Size = New System.Drawing.Size(216, 572)
         Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox2.TabIndex = 10
         Me.PictureBox2.TabStop = False
@@ -557,7 +557,7 @@ Partial Class Menu
         '
         Me.Panel3.BackColor = System.Drawing.SystemColors.ControlDark
         Me.Panel3.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel3.Location = New System.Drawing.Point(0, 28)
+        Me.Panel3.Location = New System.Drawing.Point(0, 25)
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(990, 20)
         Me.Panel3.TabIndex = 12

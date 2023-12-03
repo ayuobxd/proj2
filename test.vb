@@ -1,42 +1,6 @@
-﻿Public Class InputData
-
-    Public ourData As List(Of Menu.DataStr)
-    Public layersInput As List(Of Menu.LayerDta)
-    Public OurDevices As List(Of Menu.DeviseStr)
-    Public Dev As Integer
-    Public Sub Calculate()
-        Dim Rd As Double
-        Dim Qd As Double
-        Dim Mh As Double = OurDevices.Item(Dev).Hammer
-        Dim G As Double = 9.81
-        Dim H As Double = OurDevices.Item(Dev).FallingH / 100
-        Dim A As Double = OurDevices.Item(Dev).AOfCone * 100
-        Dim e As Double
-        Dim Mt As Double = OurDevices.Item(Dev).AnvilGuide
-
-        For i = 0 To DataGridView1.RowCount - 2
-            DataGridView1.Rows(i).Cells(0).Value = 0.2 * i
-            DataGridView1.Rows(i).Cells(1).Value = 20
-            e = 0.2 / DataGridView1.Rows(i).Cells(2).Value
-            Rd = ((Mh * G * H) / (A * e))
-            DataGridView1.Rows(i).Cells(3).Value = Rd
-            Qd = Rd * (Mh / (Mh + Mt))
-            DataGridView1.Rows(i).Cells(4).Value = Qd
-
-        Next i
-
-
-
-
-
-    End Sub
-
-
-
-
+﻿Public Class test
     Public Sub SaveDataGrid()
 
-        ourData.Clear()
 
         For i = 0 To DataGridView1.RowCount - 1
             Dim P As Menu.DataStr
@@ -96,10 +60,33 @@
 
 
 
+        If ourData.Count = 0 Then
+            Dim A As Double = 0
+            Dim B As Integer = 20
+            Dim C As Integer = 0
+            Dim D As Integer = 0
+            Dim F As Integer = 0
+            For i = 0 To 50
+                Dim row As String()
+                Dim randomValue1 As Integer
+                Dim randomValue2 As Double
+                Dim randomValue3 As Double
+                randomValue3 = CInt(((6 - (2) + 1) * Rnd())) + (2)
+                randomValue2 = CInt(((30 - (4) + 1) * Rnd())) + (4)
+                randomValue1 = CInt(Math.Floor((14 - (0) + 1) * Rnd())) + (0)
+                row = New String() {A, B, C, D, F}
+                DataGridView1.Rows.Add(row)
+                A += 0.2
+                B = 20
+                C = randomValue1
+                D = randomValue2
+                F = randomValue3
+            Next i
+            'Temp
+        ElseIf ourData.Count > 0 Then
+            LoadDataGrid()
 
-        LoadDataGrid()
-
-
+        End If
 
     End Sub
 
@@ -119,9 +106,5 @@
 
     End Sub
 
-    Private Sub DataGridView1_CellValueChanged(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellValueChanged
 
-        Calculate()
-
-    End Sub
 End Class
