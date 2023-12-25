@@ -3,7 +3,7 @@
 Public Class Device
 
 
-    Public ourDevice As List(Of Menu.DeviseStr)
+    Public ourDevice As List(Of DPT.DeviseStr)
     Public SelDev As Integer
 
     Public Function IsNotNull() As Boolean
@@ -35,7 +35,7 @@ Public Class Device
     End Function
 
     Public Sub SaveDevices()
-        Dim P As Menu.DeviseStr
+        Dim P As DPT.DeviseStr
         If Not IsNumeric(TextBox8.Text) Or
             Not IsNumeric(TextBox7.Text) Or
             Not IsNumeric(TextBox6.Text) Or

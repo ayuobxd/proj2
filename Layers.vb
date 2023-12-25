@@ -1,6 +1,6 @@
 ﻿Public Class Layers
 
-    Public ourLayers As List(Of Menu.LayerDta)
+    Public ourLayers As List(Of DPT.LayerDta)
     Public LayerN
     Public LayerC As New List(Of Integer)
 
@@ -10,6 +10,7 @@
 
         For i = 0 To ourLayers.Count - 1
             CheckedListBox1.Items.Add(ourLayers.Item(i).Name)
+            CheckedListBox1.Items(i).ForeColor = Color.FromArgb(ourLayers.Item(i).R, ourLayers.Item(i).G, ourLayers.Item(i).B)
             If LayerC.Contains(i) Then
                 CheckedListBox1.SetItemChecked(i, True)
             Else
@@ -45,7 +46,7 @@
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Dim P As Menu.LayerDta
+        Dim P As DPT.LayerDta
         P.Name = TextBox1.Text
         P.R = Panel1.BackColor.R
         P.G = Panel1.BackColor.G

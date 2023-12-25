@@ -1,8 +1,8 @@
 ﻿Public Class InputData
 
-    Public ourData As List(Of Menu.DataStr)
-    Public layersInput As List(Of Menu.LayerDta)
-    Public OurDevices As List(Of Menu.DeviseStr)
+    Public ourData As List(Of DPT.DataStr)
+    Public layersInput As List(Of DPT.LayerDta)
+    Public OurDevices As List(Of DPT.DeviseStr)
     Public Dev As Integer
     Public Sub Calculate()
         Dim Rd As Double
@@ -39,7 +39,7 @@
         ourData.Clear()
 
         For i = 0 To DataGridView1.RowCount - 1
-            Dim P As Menu.DataStr
+            Dim P As DPT.DataStr
             P.depth = DataGridView1.Rows(i).Cells(0).Value
             P.notch = DataGridView1.Rows(i).Cells(1).Value
             P.Nb = DataGridView1.Rows(i).Cells(2).Value
@@ -120,8 +120,9 @@
     End Sub
 
     Private Sub DataGridView1_CellValueChanged(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellValueChanged
-
         Calculate()
+        'Dim ourdeviceVect() As Menu.DeviseStr = OurDevices.ToArray
 
+        'OurDevices = ourdeviceVect.ToList
     End Sub
 End Class
