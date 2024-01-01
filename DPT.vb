@@ -1131,29 +1131,17 @@ Public Class DPT
                 gg.DrawString("Max depth: " & MaxDepth & "m", fnt, Brushes.Black, 20, 100)
 
                 gg.DrawString("Test type: " & Devices.Item(DevP).standard, fnt, Brushes.Black, 20, 120)
+                gg.DrawString("Notes:", fnt, Brushes.Black, 20, 140)
+                gg.DrawString(RichTextBox1.Text, fnt, Brushes.Black, 55, 140)
 
-
-                If Notes.Length > 1 Then
-                    Dim lengthN As Integer = Math.Ceiling(Notes.Length / 50)
-
-                    Dim start As Integer = 0
-                    gg.DrawString("Notes: ", fnt, Brushes.Black, 20, 140)
-                    For i = 1 To lengthN
-                        Dim l As Integer
-                        If Notes.Length >= i * 50 Then
-                            l = 50
-
-                        ElseIf Notes.Length < i * 50 Then
-                            l = Notes.Length - (i - 1) * 50
-                        End If
-                        Dim substring As String = Notes.Substring(start, l)
-                        start += 50
-                        gg.DrawString(substring & "-", fnt, Brushes.Black, 55, 120 + (i * 20))
-                    Next i
-                End If
             End Using
             Dim dirctory As String = "0.png"
             bmp.Save(dirctory, Imaging.ImageFormat.Png)
+
+
+
+
+
         End Using
     End Sub
 
@@ -1293,5 +1281,9 @@ Public Class DPT
 
         End Select
 
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs)
+        Console.WriteLine(RichTextBox1.Text)
     End Sub
 End Class
