@@ -5,10 +5,7 @@
     Public OurDevices As List(Of DPT.DeviseStr)
     Public Dev As Integer
     Public Sub Calculate()
-        Console.WriteLine(Dev)
-        Console.WriteLine(OurDevices.Item(0).Hammer)
-        Console.WriteLine(OurDevices.Item(1).Hammer)
-        Console.WriteLine(OurDevices.Item(2).Hammer)
+
         Dim Rd As Double
         Dim Qd As Double
         Dim Mh As Double = OurDevices.Item(Dev).Hammer
