@@ -34,8 +34,6 @@ Partial Class DPT
         Me.PDFToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PNGToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EXCELToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ImportToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.PrintToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DataToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TestInfoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DeviceInfoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -55,8 +53,6 @@ Partial Class DPT
         Me.ToolStripMenuItem6 = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuItem7 = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuItem8 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.DrawingsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.LayersToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
@@ -89,7 +85,7 @@ Partial Class DPT
         Me.MenuStrip1.BackColor = System.Drawing.Color.Gray
         Me.MenuStrip1.Font = New System.Drawing.Font("Cambria", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.MenuStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.DataToolStripMenuItem, Me.GraphToolStripMenuItem, Me.DrawingsToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.DataToolStripMenuItem, Me.GraphToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(992, 28)
@@ -98,7 +94,7 @@ Partial Class DPT
         '
         'FileToolStripMenuItem
         '
-        Me.FileToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NewTestToolStripMenuItem, Me.OpenTestToolStripMenuItem, Me.SaveToolStripMenuItem, Me.SaveAsToolStripMenuItem, Me.ToolStripSeparator1, Me.ExportToolStripMenuItem, Me.ImportToolStripMenuItem, Me.PrintToolStripMenuItem})
+        Me.FileToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NewTestToolStripMenuItem, Me.OpenTestToolStripMenuItem, Me.SaveToolStripMenuItem, Me.SaveAsToolStripMenuItem, Me.ToolStripSeparator1, Me.ExportToolStripMenuItem})
         Me.FileToolStripMenuItem.Name = "FileToolStripMenuItem"
         Me.FileToolStripMenuItem.Size = New System.Drawing.Size(45, 24)
         Me.FileToolStripMenuItem.Text = "File"
@@ -148,36 +144,22 @@ Partial Class DPT
         '
         Me.PDFToolStripMenuItem.Image = CType(resources.GetObject("PDFToolStripMenuItem.Image"), System.Drawing.Image)
         Me.PDFToolStripMenuItem.Name = "PDFToolStripMenuItem"
-        Me.PDFToolStripMenuItem.Size = New System.Drawing.Size(133, 26)
+        Me.PDFToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
         Me.PDFToolStripMenuItem.Text = "PDF"
         '
         'PNGToolStripMenuItem
         '
         Me.PNGToolStripMenuItem.Image = CType(resources.GetObject("PNGToolStripMenuItem.Image"), System.Drawing.Image)
         Me.PNGToolStripMenuItem.Name = "PNGToolStripMenuItem"
-        Me.PNGToolStripMenuItem.Size = New System.Drawing.Size(133, 26)
+        Me.PNGToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
         Me.PNGToolStripMenuItem.Text = "PNG"
         '
         'EXCELToolStripMenuItem
         '
         Me.EXCELToolStripMenuItem.Image = CType(resources.GetObject("EXCELToolStripMenuItem.Image"), System.Drawing.Image)
         Me.EXCELToolStripMenuItem.Name = "EXCELToolStripMenuItem"
-        Me.EXCELToolStripMenuItem.Size = New System.Drawing.Size(133, 26)
+        Me.EXCELToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
         Me.EXCELToolStripMenuItem.Text = "EXCEL"
-        '
-        'ImportToolStripMenuItem
-        '
-        Me.ImportToolStripMenuItem.Image = CType(resources.GetObject("ImportToolStripMenuItem.Image"), System.Drawing.Image)
-        Me.ImportToolStripMenuItem.Name = "ImportToolStripMenuItem"
-        Me.ImportToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
-        Me.ImportToolStripMenuItem.Text = "Import "
-        '
-        'PrintToolStripMenuItem
-        '
-        Me.PrintToolStripMenuItem.Image = CType(resources.GetObject("PrintToolStripMenuItem.Image"), System.Drawing.Image)
-        Me.PrintToolStripMenuItem.Name = "PrintToolStripMenuItem"
-        Me.PrintToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
-        Me.PrintToolStripMenuItem.Text = "Print"
         '
         'DataToolStripMenuItem
         '
@@ -316,20 +298,6 @@ Partial Class DPT
         Me.ToolStripMenuItem8.Size = New System.Drawing.Size(162, 26)
         Me.ToolStripMenuItem8.Text = "Full Space"
         '
-        'DrawingsToolStripMenuItem
-        '
-        Me.DrawingsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.LayersToolStripMenuItem})
-        Me.DrawingsToolStripMenuItem.Name = "DrawingsToolStripMenuItem"
-        Me.DrawingsToolStripMenuItem.Size = New System.Drawing.Size(82, 24)
-        Me.DrawingsToolStripMenuItem.Text = "Drawings"
-        '
-        'LayersToolStripMenuItem
-        '
-        Me.LayersToolStripMenuItem.Image = CType(resources.GetObject("LayersToolStripMenuItem.Image"), System.Drawing.Image)
-        Me.LayersToolStripMenuItem.Name = "LayersToolStripMenuItem"
-        Me.LayersToolStripMenuItem.Size = New System.Drawing.Size(132, 26)
-        Me.LayersToolStripMenuItem.Text = "Layers"
-        '
         'GroupBox1
         '
         Me.GroupBox1.BackColor = System.Drawing.SystemColors.Control
@@ -467,6 +435,7 @@ Partial Class DPT
         '
         Me.RichTextBox1.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.RichTextBox1.Location = New System.Drawing.Point(3, 415)
+        Me.RichTextBox1.MaxLength = 300
         Me.RichTextBox1.Name = "RichTextBox1"
         Me.RichTextBox1.Size = New System.Drawing.Size(203, 145)
         Me.RichTextBox1.TabIndex = 1
@@ -478,9 +447,9 @@ Partial Class DPT
         Me.LabelMinqd.Font = New System.Drawing.Font("Cambria", 9.0!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LabelMinqd.Location = New System.Drawing.Point(6, 176)
         Me.LabelMinqd.Name = "LabelMinqd"
-        Me.LabelMinqd.Size = New System.Drawing.Size(58, 17)
+        Me.LabelMinqd.Size = New System.Drawing.Size(60, 17)
         Me.LabelMinqd.TabIndex = 4
-        Me.LabelMinqd.Text = "Max rd :"
+        Me.LabelMinqd.Text = "Max qd :"
         '
         'LabelMaxqd
         '
@@ -488,9 +457,9 @@ Partial Class DPT
         Me.LabelMaxqd.Font = New System.Drawing.Font("Cambria", 9.0!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LabelMaxqd.Location = New System.Drawing.Point(6, 127)
         Me.LabelMaxqd.Name = "LabelMaxqd"
-        Me.LabelMaxqd.Size = New System.Drawing.Size(60, 17)
+        Me.LabelMaxqd.Size = New System.Drawing.Size(58, 17)
         Me.LabelMaxqd.TabIndex = 3
-        Me.LabelMaxqd.Text = "Max qd :"
+        Me.LabelMaxqd.Text = "Max rd :"
         '
         'LabelTestType
         '
@@ -597,7 +566,6 @@ Partial Class DPT
     Friend WithEvents SaveAsToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ToolStripSeparator1 As ToolStripSeparator
     Friend WithEvents ExportToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents PrintToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents DataToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents TestInfoToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents DeviceInfoToolStripMenuItem As ToolStripMenuItem
@@ -613,10 +581,7 @@ Partial Class DPT
     Friend WithEvents LabelTestType As Label
     Friend WithEvents LabelTestDate As Label
     Friend WithEvents RichTextBox1 As RichTextBox
-    Friend WithEvents DrawingsToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents LayersToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents EXCELToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents ImportToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents Label1 As Label

@@ -189,7 +189,7 @@ Partial Class Device
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(271, 442)
+        Me.Button1.Location = New System.Drawing.Point(12, 442)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(107, 26)
         Me.Button1.TabIndex = 35
@@ -198,7 +198,7 @@ Partial Class Device
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(173, 442)
+        Me.Button2.Location = New System.Drawing.Point(125, 442)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(91, 26)
         Me.Button2.TabIndex = 36
@@ -207,11 +207,11 @@ Partial Class Device
         '
         'Button3
         '
-        Me.Button3.Location = New System.Drawing.Point(16, 442)
+        Me.Button3.Location = New System.Drawing.Point(287, 442)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(91, 26)
         Me.Button3.TabIndex = 37
-        Me.Button3.Text = "Close"
+        Me.Button3.Text = "OK"
         Me.Button3.UseVisualStyleBackColor = True
         '
         'Label12

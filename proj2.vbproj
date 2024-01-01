@@ -51,6 +51,12 @@
     <ApplicationIcon>5402374_cd_arrow_navigation_remove_eject_icon.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.9.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>packages\BouncyCastle.1.8.9\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.3, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>packages\iTextSharp.5.5.13.3\lib\itextsharp.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
@@ -88,6 +94,18 @@
       <DependentUpon>Layers.vb</DependentUpon>
     </Compile>
     <Compile Include="Layers.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PDF.Designer.vb">
+      <DependentUpon>PDF.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PDF.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reminder.Designer.vb">
+      <DependentUpon>Reminder.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reminder.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="TestInfo.Designer.vb">
@@ -131,6 +149,12 @@
     <EmbeddedResource Include="Layers.resx">
       <DependentUpon>Layers.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PDF.resx">
+      <DependentUpon>PDF.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reminder.resx">
+      <DependentUpon>Reminder.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TestInfo.resx">
       <DependentUpon>TestInfo.vb</DependentUpon>
     </EmbeddedResource>
@@ -158,6 +182,7 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="App.config" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="5402374_cd_arrow_navigation_remove_eject_icon.ico" />

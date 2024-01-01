@@ -5,6 +5,10 @@
     Public OurDevices As List(Of DPT.DeviseStr)
     Public Dev As Integer
     Public Sub Calculate()
+        Console.WriteLine(Dev)
+        Console.WriteLine(OurDevices.Item(0).Hammer)
+        Console.WriteLine(OurDevices.Item(1).Hammer)
+        Console.WriteLine(OurDevices.Item(2).Hammer)
         Dim Rd As Double
         Dim Qd As Double
         Dim Mh As Double = OurDevices.Item(Dev).Hammer
@@ -15,7 +19,7 @@
         Dim Mt As Double = OurDevices.Item(Dev).AnvilGuide
 
         For i = 0 To DataGridView1.RowCount - 2
-            DataGridView1.Rows(i).Cells(0).Value = 0.2 * i
+            DataGridView1.Rows(i).Cells(0).Value = 0.2 * (i + 1)
             DataGridView1.Rows(i).Cells(1).Value = 20
             e = 0.2 / DataGridView1.Rows(i).Cells(2).Value
             Rd = ((Mh * G * H) / (A * e))
@@ -66,12 +70,14 @@
             row = New String() {A, B, C, D, F}
             DataGridView1.Rows.Add(row)
 
+            Calculate()
         Next i
 
 
     End Sub
 
     Private Sub InputData_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
         Call CenterToScreen()
         Me.FormBorderStyle = FormBorderStyle.FixedDialog
         Me.MaximizeBox = False
@@ -121,8 +127,6 @@
 
     Private Sub DataGridView1_CellValueChanged(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellValueChanged
         Calculate()
-        'Dim ourdeviceVect() As Menu.DeviseStr = OurDevices.ToArray
 
-        'OurDevices = ourdeviceVect.ToList
     End Sub
 End Class
