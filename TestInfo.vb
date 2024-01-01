@@ -17,7 +17,7 @@
 
     Public Sub LoadT()
         TextBox1.Text = testn
-        DateTimePicker1.Value = testd
+
         TextBox2.Text = ourDevice.Item(SelD).Name
         ComboBox1.Items.Clear()
         ComboBox1.Items.Add("Default")

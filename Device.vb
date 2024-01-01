@@ -93,6 +93,7 @@ Public Class Device
             ComboBox1.Items.Add(ourDevice.Item(i).Name)
         Next i
         ComboBox1.Text = "Select from..."
+
     End Sub
 
     Public Sub Remove()
@@ -141,10 +142,12 @@ Public Class Device
         End If
 
         LoadDevices()
+
     End Sub
 
     Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox1.SelectedIndexChanged
         SelDev = ComboBox1.SelectedIndex
+        Console.WriteLine(SelDev)
         TextBox1.Text = ourDevice.Item(SelDev).Name
         TextBox2.Text = ourDevice.Item(SelDev).Hammer
         TextBox3.Text = ourDevice.Item(SelDev).AnvilGuide
